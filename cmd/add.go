@@ -1,6 +1,3 @@
-/*
-Copyright © 2023 NAME HERE <EMAIL ADDRESS>
-*/
 package cmd
 
 import (
@@ -42,15 +39,15 @@ func add(input []string) {
 
 	json.Unmarshal(byteValue, &tasks)
 
-	name := strings.Join(input, " ")
+	parsedInput := strings.Join(input, " ")
 
-	task := task.Task{
-		Name: name,
-	}
+	rawTask := strings.Split(parsedInput, ":")
+
+	task := task.NewTask(rawTask[0], rawTask[1])
 
 	tasks.Tasks = append(tasks.Tasks, task)
 
-	jsonTasks, err := json.Marshal(tasks)
+	jsonTasks, err := json.MarshalIndent(tasks, "", "\t")
 	if err != nil {
 		log.Fatalf("Couldn't marshal tasks: %v", err)
 	}

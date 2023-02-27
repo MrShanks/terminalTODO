@@ -1,1 +1,22 @@
-{"tasks":[{"name":"clean","desc":"clean the apartment before 5PM"},{"name":"delete old CRDs","desc":"cleanup old CRDs from dev and prod clusters"},{"name":"third task","desc":""}]}
+{
+	"tasks": [
+		{
+			"name": "read",
+			"desc": "il conte di montecristo",
+			"status": 1,
+			"metadata": {
+				"created_at": "2023-02-27T19:57:13.178257+01:00",
+				"updated_at": "2023-02-27T19:57:13.178257+01:00"
+			}
+		},
+		{
+			"name": "clean",
+			"desc": "the apartment it is quite a mess",
+			"status": 1,
+			"metadata": {
+				"created_at": "2023-02-27T20:06:43.722597+01:00",
+				"updated_at": "2023-02-27T20:06:43.722597+01:00"
+			}
+		}
+	]
+}

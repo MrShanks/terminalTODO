@@ -1,6 +1,3 @@
-/*
-Copyright © 2023 NAME HERE <EMAIL ADDRESS>
-*/
 package cmd
 
 import (
@@ -43,6 +40,17 @@ func list() {
 	json.Unmarshal(byteValue, &tasks)
 
 	for _, task := range tasks.Tasks {
-		fmt.Printf("Name: %v\nDescription: %v\n\n", task.Name, task.Desc)
+		var status string
+		switch task.Status {
+		case 1:
+			status = "TODO"
+		case 2:
+			status = "WIP"
+		case 3:
+			status = "DONE"
+		default:
+			status = "UNKNOWN"
+		}
+		fmt.Printf("Name: %v\nDescription: %v\nStatus: %v\n\n", task.Name, task.Desc, status)
 	}
 }
