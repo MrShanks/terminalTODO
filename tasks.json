@@ -1,12 +1,1 @@
-{
-    "tasks": [
-        {
-            "name": "clean",
-            "desc": "clean the apartment before 5PM"
-        },
-        {
-            "name": "delete old CRDs",
-            "desc": "cleanup old CRDs from dev and prod clusters"
-        }
-    ]
-}
+{"tasks":[{"name":"clean","desc":"clean the apartment before 5PM"},{"name":"delete old CRDs","desc":"cleanup old CRDs from dev and prod clusters"},{"name":"third task","desc":""}]}

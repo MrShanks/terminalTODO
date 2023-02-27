@@ -10,7 +10,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/MrShanks/terminalTODO/pkg/task"
+	task "github.com/MrShanks/terminalTODO/pkg"
 	"github.com/spf13/cobra"
 )
 
