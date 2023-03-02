@@ -40,17 +40,7 @@ func list() {
 	json.Unmarshal(byteValue, &tasks)
 
 	for _, task := range tasks.Tasks {
-		var status string
-		switch task.Status {
-		case 1:
-			status = "TODO"
-		case 2:
-			status = "WIP"
-		case 3:
-			status = "DONE"
-		default:
-			status = "UNKNOWN"
-		}
+		status := task.GetStatus()
 		fmt.Printf("Name: %v\nDescription: %v\nStatus: %v\n\n", task.Name, task.Desc, status)
 	}
 }
